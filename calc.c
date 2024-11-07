@@ -5,17 +5,19 @@
 
 int main(){
 	double num1, num2, result;
-	char n1[3], n2[3];
+	char n1[4], n2[4];
 	char op;
 	scanf("%s %c %s", n1, &op, n2);
 
 	if (strcmp(n1, "ANS") != 0) {
+		printf("%s\n", n1);
 	    	char *end;
    		num1 = strtod(n1, &end);
 	} else {
 		FILE *file = fopen("history.txt", "r");
 		fscanf(file, "%lf", &num1);
 		fclose(file);
+		printf("hehe\n");
 	}
 
 	if (strcmp(n2, "ANS") != 0) {
